@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.ClientSelectionReadOnlytextBox = new System.Windows.Forms.TextBox();
-            this.OrderIDLabel = new System.Windows.Forms.Label();
             this.DueDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DueDateLabel = new System.Windows.Forms.Label();
             this.Clientlabel = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.ShirtDetailsAddlistBox = new System.Windows.Forms.ListBox();
             this.ScreensNumberNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.TagBoolcomboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.AddShirtDetailsbutton = new System.Windows.Forms.Button();
             this.GendercomboBox = new System.Windows.Forms.ComboBox();
             this.SizeComboBox = new System.Windows.Forms.ComboBox();
@@ -59,10 +59,8 @@
             this.Calculatebutton = new System.Windows.Forms.Button();
             this.LaborPercentagecomboBox = new System.Windows.Forms.ComboBox();
             this.MarginPercentageSelectorcomboBox = new System.Windows.Forms.ComboBox();
-            this.Wastelabel = new System.Windows.Forms.Label();
             this.LaborPercentSignlabel = new System.Windows.Forms.Label();
             this.Laborlabel = new System.Windows.Forms.Label();
-            this.MaterialsCostlabel = new System.Windows.Forms.Label();
             this.TotalQuotelabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.MarginPercentageSelectionlabel = new System.Windows.Forms.Label();
@@ -70,8 +68,6 @@
             this.ItemCountlabel = new System.Windows.Forms.Label();
             this.TotalQuotetextBox = new System.Windows.Forms.TextBox();
             this.TaxAmounttextBox = new System.Windows.Forms.TextBox();
-            this.WastetextBox = new System.Windows.Forms.TextBox();
-            this.MaterialsCostReadOnlytextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LaborCosttextBox = new System.Windows.Forms.TextBox();
             this.ItemCounttextBox = new System.Windows.Forms.TextBox();
@@ -88,7 +84,6 @@
             this.OrderDetailsNoteslabel = new System.Windows.Forms.Label();
             this.HeaderShirtlabel = new System.Windows.Forms.Label();
             this.DoneButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.OrdergroupBox.SuspendLayout();
             this.ShirtDetailsgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScreensNumberNumericUpDown)).BeginInit();
@@ -105,21 +100,11 @@
             this.ClientSelectionReadOnlytextBox.Size = new System.Drawing.Size(207, 23);
             this.ClientSelectionReadOnlytextBox.TabIndex = 1;
             // 
-            // OrderIDLabel
-            // 
-            this.OrderIDLabel.AutoSize = true;
-            this.OrderIDLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderIDLabel.Location = new System.Drawing.Point(385, 406);
-            this.OrderIDLabel.Name = "OrderIDLabel";
-            this.OrderIDLabel.Size = new System.Drawing.Size(85, 19);
-            this.OrderIDLabel.TabIndex = 1;
-            this.OrderIDLabel.Text = "OrderID: ";
-            // 
             // DueDateDateTimePicker
             // 
             this.DueDateDateTimePicker.Location = new System.Drawing.Point(8, 166);
             this.DueDateDateTimePicker.Name = "DueDateDateTimePicker";
-            this.DueDateDateTimePicker.Size = new System.Drawing.Size(187, 23);
+            this.DueDateDateTimePicker.Size = new System.Drawing.Size(260, 23);
             this.DueDateDateTimePicker.TabIndex = 5;
             this.DueDateDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -169,6 +154,7 @@
             this.AmountPaidtextBox.Name = "AmountPaidtextBox";
             this.AmountPaidtextBox.Size = new System.Drawing.Size(98, 23);
             this.AmountPaidtextBox.TabIndex = 3;
+            this.AmountPaidtextBox.Text = "12";
             // 
             // AmountPaidlabel
             // 
@@ -185,7 +171,6 @@
             // 
             this.ShirtDetailsgroupBox.Controls.Add(this.ItemsListlable);
             this.ShirtDetailsgroupBox.Controls.Add(this.ItemListlistBox);
-            this.ShirtDetailsgroupBox.Controls.Add(this.ShirtDetailsAddlistBox);
             this.ShirtDetailsgroupBox.Controls.Add(this.ScreensNumberNumericUpDown);
             this.ShirtDetailsgroupBox.Controls.Add(this.TagBoolcomboBox);
             this.ShirtDetailsgroupBox.Controls.Add(this.button1);
@@ -205,7 +190,7 @@
             this.ShirtDetailsgroupBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShirtDetailsgroupBox.Location = new System.Drawing.Point(389, 81);
             this.ShirtDetailsgroupBox.Name = "ShirtDetailsgroupBox";
-            this.ShirtDetailsgroupBox.Size = new System.Drawing.Size(616, 304);
+            this.ShirtDetailsgroupBox.Size = new System.Drawing.Size(616, 261);
             this.ShirtDetailsgroupBox.TabIndex = 0;
             this.ShirtDetailsgroupBox.TabStop = false;
             this.ShirtDetailsgroupBox.Text = "Shirt Details";
@@ -226,7 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ItemListlistBox.FormattingEnabled = true;
             this.ItemListlistBox.ItemHeight = 16;
-            this.ItemListlistBox.Location = new System.Drawing.Point(0, 99);
+            this.ItemListlistBox.Location = new System.Drawing.Point(0, 177);
             this.ItemListlistBox.Name = "ItemListlistBox";
             this.ItemListlistBox.Size = new System.Drawing.Size(616, 84);
             this.ItemListlistBox.TabIndex = 15;
@@ -236,10 +221,9 @@
             this.ShirtDetailsAddlistBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ShirtDetailsAddlistBox.FormattingEnabled = true;
-            this.ShirtDetailsAddlistBox.ItemHeight = 16;
-            this.ShirtDetailsAddlistBox.Location = new System.Drawing.Point(0, 225);
+            this.ShirtDetailsAddlistBox.Location = new System.Drawing.Point(15, 361);
             this.ShirtDetailsAddlistBox.Name = "ShirtDetailsAddlistBox";
-            this.ShirtDetailsAddlistBox.Size = new System.Drawing.Size(616, 84);
+            this.ShirtDetailsAddlistBox.Size = new System.Drawing.Size(692, 121);
             this.ShirtDetailsAddlistBox.TabIndex = 17;
             // 
             // ScreensNumberNumericUpDown
@@ -263,10 +247,20 @@
             this.TagBoolcomboBox.Text = "Y";
             this.TagBoolcomboBox.SelectedIndexChanged += new System.EventHandler(this.TagBoolcomboBox_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(178, 108);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 34);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "&Find Vendor";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // AddShirtDetailsbutton
             // 
             this.AddShirtDetailsbutton.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddShirtDetailsbutton.Location = new System.Drawing.Point(132, 189);
+            this.AddShirtDetailsbutton.Location = new System.Drawing.Point(304, 108);
             this.AddShirtDetailsbutton.Name = "AddShirtDetailsbutton";
             this.AddShirtDetailsbutton.Size = new System.Drawing.Size(120, 34);
             this.AddShirtDetailsbutton.TabIndex = 16;
@@ -315,8 +309,9 @@
             "Tank"});
             this.ShirtTypeComboBox.Location = new System.Drawing.Point(77, 45);
             this.ShirtTypeComboBox.Name = "ShirtTypeComboBox";
-            this.ShirtTypeComboBox.Size = new System.Drawing.Size(101, 24);
+            this.ShirtTypeComboBox.Size = new System.Drawing.Size(85, 24);
             this.ShirtTypeComboBox.TabIndex = 3;
+            this.ShirtTypeComboBox.Text = "TeeShirt";
             this.ShirtTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.ShirtTypeComboBox_SelectedIndexChanged);
             // 
             // ShirtMaterialcomboBox
@@ -446,10 +441,8 @@
             this.OrderTotalsGroupBox.Controls.Add(this.Calculatebutton);
             this.OrderTotalsGroupBox.Controls.Add(this.LaborPercentagecomboBox);
             this.OrderTotalsGroupBox.Controls.Add(this.MarginPercentageSelectorcomboBox);
-            this.OrderTotalsGroupBox.Controls.Add(this.Wastelabel);
             this.OrderTotalsGroupBox.Controls.Add(this.LaborPercentSignlabel);
             this.OrderTotalsGroupBox.Controls.Add(this.Laborlabel);
-            this.OrderTotalsGroupBox.Controls.Add(this.MaterialsCostlabel);
             this.OrderTotalsGroupBox.Controls.Add(this.TotalQuotelabel);
             this.OrderTotalsGroupBox.Controls.Add(this.label1);
             this.OrderTotalsGroupBox.Controls.Add(this.MarginPercentageSelectionlabel);
@@ -457,22 +450,20 @@
             this.OrderTotalsGroupBox.Controls.Add(this.ItemCountlabel);
             this.OrderTotalsGroupBox.Controls.Add(this.TotalQuotetextBox);
             this.OrderTotalsGroupBox.Controls.Add(this.TaxAmounttextBox);
-            this.OrderTotalsGroupBox.Controls.Add(this.WastetextBox);
-            this.OrderTotalsGroupBox.Controls.Add(this.MaterialsCostReadOnlytextBox);
             this.OrderTotalsGroupBox.Controls.Add(this.textBox1);
             this.OrderTotalsGroupBox.Controls.Add(this.LaborCosttextBox);
             this.OrderTotalsGroupBox.Controls.Add(this.ItemCounttextBox);
             this.OrderTotalsGroupBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderTotalsGroupBox.Location = new System.Drawing.Point(728, 391);
+            this.OrderTotalsGroupBox.Location = new System.Drawing.Point(728, 348);
             this.OrderTotalsGroupBox.Name = "OrderTotalsGroupBox";
-            this.OrderTotalsGroupBox.Size = new System.Drawing.Size(277, 304);
+            this.OrderTotalsGroupBox.Size = new System.Drawing.Size(277, 291);
             this.OrderTotalsGroupBox.TabIndex = 1;
             this.OrderTotalsGroupBox.TabStop = false;
             this.OrderTotalsGroupBox.Text = "Order Totals";
             // 
             // Calculatebutton
             // 
-            this.Calculatebutton.Location = new System.Drawing.Point(57, 245);
+            this.Calculatebutton.Location = new System.Drawing.Point(57, 183);
             this.Calculatebutton.Name = "Calculatebutton";
             this.Calculatebutton.Size = new System.Drawing.Size(94, 23);
             this.Calculatebutton.TabIndex = 4;
@@ -489,11 +480,11 @@
             "10",
             "15",
             "20"});
-            this.LaborPercentagecomboBox.Location = new System.Drawing.Point(93, 176);
+            this.LaborPercentagecomboBox.Location = new System.Drawing.Point(93, 114);
             this.LaborPercentagecomboBox.Name = "LaborPercentagecomboBox";
             this.LaborPercentagecomboBox.Size = new System.Drawing.Size(40, 24);
             this.LaborPercentagecomboBox.TabIndex = 3;
-            this.LaborPercentagecomboBox.Text = "40";
+            this.LaborPercentagecomboBox.Text = ".4";
             this.LaborPercentagecomboBox.SelectedIndexChanged += new System.EventHandler(this.LaborPercentagecomboBox_SelectedIndexChanged);
             // 
             // MarginPercentageSelectorcomboBox
@@ -505,29 +496,18 @@
             "10",
             "15",
             "20"});
-            this.MarginPercentageSelectorcomboBox.Location = new System.Drawing.Point(168, 147);
+            this.MarginPercentageSelectorcomboBox.Location = new System.Drawing.Point(168, 85);
             this.MarginPercentageSelectorcomboBox.Name = "MarginPercentageSelectorcomboBox";
             this.MarginPercentageSelectorcomboBox.Size = new System.Drawing.Size(103, 24);
             this.MarginPercentageSelectorcomboBox.TabIndex = 1;
+            this.MarginPercentageSelectorcomboBox.Text = ".4";
             this.MarginPercentageSelectorcomboBox.SelectedIndexChanged += new System.EventHandler(this.MarginPercentageSelectorcomboBox_SelectedIndexChanged);
-            // 
-            // Wastelabel
-            // 
-            this.Wastelabel.AutoSize = true;
-            this.Wastelabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Wastelabel.Location = new System.Drawing.Point(106, 58);
-            this.Wastelabel.Name = "Wastelabel";
-            this.Wastelabel.Size = new System.Drawing.Size(55, 16);
-            this.Wastelabel.TabIndex = 7;
-            this.Wastelabel.Text = "Waste:";
-            this.Wastelabel.Visible = false;
-            this.Wastelabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // LaborPercentSignlabel
             // 
             this.LaborPercentSignlabel.AutoSize = true;
             this.LaborPercentSignlabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LaborPercentSignlabel.Location = new System.Drawing.Point(139, 180);
+            this.LaborPercentSignlabel.Location = new System.Drawing.Point(139, 118);
             this.LaborPercentSignlabel.Name = "LaborPercentSignlabel";
             this.LaborPercentSignlabel.Size = new System.Drawing.Size(22, 16);
             this.LaborPercentSignlabel.TabIndex = 13;
@@ -538,29 +518,18 @@
             // 
             this.Laborlabel.AutoSize = true;
             this.Laborlabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Laborlabel.Location = new System.Drawing.Point(35, 180);
+            this.Laborlabel.Location = new System.Drawing.Point(35, 118);
             this.Laborlabel.Name = "Laborlabel";
             this.Laborlabel.Size = new System.Drawing.Size(50, 16);
             this.Laborlabel.TabIndex = 2;
             this.Laborlabel.Text = "Labor:";
             this.Laborlabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // MaterialsCostlabel
-            // 
-            this.MaterialsCostlabel.AutoSize = true;
-            this.MaterialsCostlabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaterialsCostlabel.Location = new System.Drawing.Point(56, 29);
-            this.MaterialsCostlabel.Name = "MaterialsCostlabel";
-            this.MaterialsCostlabel.Size = new System.Drawing.Size(105, 16);
-            this.MaterialsCostlabel.TabIndex = 5;
-            this.MaterialsCostlabel.Text = "Item Unit Cost:";
-            this.MaterialsCostlabel.Click += new System.EventHandler(this.label1_Click);
-            // 
             // TotalQuotelabel
             // 
             this.TotalQuotelabel.AutoSize = true;
             this.TotalQuotelabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalQuotelabel.Location = new System.Drawing.Point(50, 277);
+            this.TotalQuotelabel.Location = new System.Drawing.Point(50, 215);
             this.TotalQuotelabel.Name = "TotalQuotelabel";
             this.TotalQuotelabel.Size = new System.Drawing.Size(113, 16);
             this.TotalQuotelabel.TabIndex = 16;
@@ -571,7 +540,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 209);
+            this.label1.Location = new System.Drawing.Point(29, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 16);
             this.label1.TabIndex = 15;
@@ -582,7 +551,7 @@
             // 
             this.MarginPercentageSelectionlabel.AutoSize = true;
             this.MarginPercentageSelectionlabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MarginPercentageSelectionlabel.Location = new System.Drawing.Point(47, 150);
+            this.MarginPercentageSelectionlabel.Location = new System.Drawing.Point(47, 88);
             this.MarginPercentageSelectionlabel.Name = "MarginPercentageSelectionlabel";
             this.MarginPercentageSelectionlabel.Size = new System.Drawing.Size(114, 16);
             this.MarginPercentageSelectionlabel.TabIndex = 0;
@@ -593,7 +562,7 @@
             // 
             this.Taxlabel.AutoSize = true;
             this.Taxlabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Taxlabel.Location = new System.Drawing.Point(126, 116);
+            this.Taxlabel.Location = new System.Drawing.Point(126, 54);
             this.Taxlabel.Name = "Taxlabel";
             this.Taxlabel.Size = new System.Drawing.Size(35, 16);
             this.Taxlabel.TabIndex = 11;
@@ -604,7 +573,7 @@
             // 
             this.ItemCountlabel.AutoSize = true;
             this.ItemCountlabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemCountlabel.Location = new System.Drawing.Point(76, 87);
+            this.ItemCountlabel.Location = new System.Drawing.Point(76, 25);
             this.ItemCountlabel.Name = "ItemCountlabel";
             this.ItemCountlabel.Size = new System.Drawing.Size(85, 16);
             this.ItemCountlabel.TabIndex = 9;
@@ -616,7 +585,7 @@
             this.TotalQuotetextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TotalQuotetextBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TotalQuotetextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.TotalQuotetextBox.Location = new System.Drawing.Point(168, 274);
+            this.TotalQuotetextBox.Location = new System.Drawing.Point(168, 212);
             this.TotalQuotetextBox.Name = "TotalQuotetextBox";
             this.TotalQuotetextBox.ReadOnly = true;
             this.TotalQuotetextBox.Size = new System.Drawing.Size(103, 23);
@@ -627,35 +596,16 @@
             // TaxAmounttextBox
             // 
             this.TaxAmounttextBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TaxAmounttextBox.Location = new System.Drawing.Point(168, 113);
+            this.TaxAmounttextBox.Location = new System.Drawing.Point(168, 51);
             this.TaxAmounttextBox.Name = "TaxAmounttextBox";
             this.TaxAmounttextBox.ReadOnly = true;
             this.TaxAmounttextBox.Size = new System.Drawing.Size(103, 23);
             this.TaxAmounttextBox.TabIndex = 12;
             // 
-            // WastetextBox
-            // 
-            this.WastetextBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WastetextBox.Location = new System.Drawing.Point(168, 55);
-            this.WastetextBox.Name = "WastetextBox";
-            this.WastetextBox.ReadOnly = true;
-            this.WastetextBox.Size = new System.Drawing.Size(103, 23);
-            this.WastetextBox.TabIndex = 8;
-            this.WastetextBox.Visible = false;
-            // 
-            // MaterialsCostReadOnlytextBox
-            // 
-            this.MaterialsCostReadOnlytextBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MaterialsCostReadOnlytextBox.Location = new System.Drawing.Point(168, 26);
-            this.MaterialsCostReadOnlytextBox.Name = "MaterialsCostReadOnlytextBox";
-            this.MaterialsCostReadOnlytextBox.ReadOnly = true;
-            this.MaterialsCostReadOnlytextBox.Size = new System.Drawing.Size(103, 23);
-            this.MaterialsCostReadOnlytextBox.TabIndex = 6;
-            // 
             // textBox1
             // 
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Location = new System.Drawing.Point(168, 206);
+            this.textBox1.Location = new System.Drawing.Point(168, 144);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(103, 23);
@@ -664,7 +614,7 @@
             // LaborCosttextBox
             // 
             this.LaborCosttextBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LaborCosttextBox.Location = new System.Drawing.Point(168, 177);
+            this.LaborCosttextBox.Location = new System.Drawing.Point(168, 115);
             this.LaborCosttextBox.Name = "LaborCosttextBox";
             this.LaborCosttextBox.ReadOnly = true;
             this.LaborCosttextBox.Size = new System.Drawing.Size(103, 23);
@@ -673,7 +623,7 @@
             // ItemCounttextBox
             // 
             this.ItemCounttextBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ItemCounttextBox.Location = new System.Drawing.Point(168, 84);
+            this.ItemCounttextBox.Location = new System.Drawing.Point(168, 22);
             this.ItemCounttextBox.Name = "ItemCounttextBox";
             this.ItemCounttextBox.ReadOnly = true;
             this.ItemCounttextBox.Size = new System.Drawing.Size(103, 23);
@@ -752,7 +702,7 @@
             // 
             // OrderDetailstextBox
             // 
-            this.OrderDetailstextBox.Location = new System.Drawing.Point(12, 380);
+            this.OrderDetailstextBox.Location = new System.Drawing.Point(12, 548);
             this.OrderDetailstextBox.Multiline = true;
             this.OrderDetailstextBox.Name = "OrderDetailstextBox";
             this.OrderDetailstextBox.Size = new System.Drawing.Size(352, 147);
@@ -762,7 +712,7 @@
             // 
             this.OrderDetailsNoteslabel.AutoSize = true;
             this.OrderDetailsNoteslabel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderDetailsNoteslabel.Location = new System.Drawing.Point(12, 361);
+            this.OrderDetailsNoteslabel.Location = new System.Drawing.Point(12, 529);
             this.OrderDetailsNoteslabel.Name = "OrderDetailsNoteslabel";
             this.OrderDetailsNoteslabel.Size = new System.Drawing.Size(57, 16);
             this.OrderDetailsNoteslabel.TabIndex = 3;
@@ -783,23 +733,13 @@
             // DoneButton
             // 
             this.DoneButton.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoneButton.Location = new System.Drawing.Point(911, 701);
+            this.DoneButton.Location = new System.Drawing.Point(905, 645);
             this.DoneButton.Name = "DoneButton";
             this.DoneButton.Size = new System.Drawing.Size(94, 50);
             this.DoneButton.TabIndex = 2;
             this.DoneButton.Text = "&Done";
             this.DoneButton.UseVisualStyleBackColor = true;
             this.DoneButton.Click += new System.EventHandler(this.Done_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 34);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "&Find Vendor";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // OrderShirtTypeForm
             // 
@@ -810,13 +750,13 @@
             this.ClientSize = new System.Drawing.Size(1017, 783);
             this.Controls.Add(this.DoneButton);
             this.Controls.Add(this.OrderDetailstextBox);
+            this.Controls.Add(this.ShirtDetailsAddlistBox);
             this.Controls.Add(this.UserOrderInfostatusStrip);
             this.Controls.Add(this.OrderTotalsGroupBox);
             this.Controls.Add(this.OrderDetailsNoteslabel);
             this.Controls.Add(this.HeaderShirtlabel);
             this.Controls.Add(this.ShirtDetailsgroupBox);
             this.Controls.Add(this.OrdergroupBox);
-            this.Controls.Add(this.OrderIDLabel);
             this.Controls.Add(this.OrderBuildermenuStrip);
             this.MainMenuStrip = this.OrderBuildermenuStrip;
             this.Name = "OrderShirtTypeForm";
@@ -839,7 +779,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox ClientSelectionReadOnlytextBox;
-        private System.Windows.Forms.Label OrderIDLabel;
         private System.Windows.Forms.DateTimePicker DueDateDateTimePicker;
         private System.Windows.Forms.Label DueDateLabel;
         private System.Windows.Forms.Label Clientlabel;
@@ -859,17 +798,13 @@
         private System.Windows.Forms.GroupBox OrderTotalsGroupBox;
         private System.Windows.Forms.TextBox TotalQuotetextBox;
         private System.Windows.Forms.TextBox TaxAmounttextBox;
-        private System.Windows.Forms.TextBox WastetextBox;
-        private System.Windows.Forms.TextBox MaterialsCostReadOnlytextBox;
         private System.Windows.Forms.TextBox LaborCosttextBox;
         private System.Windows.Forms.TextBox ItemCounttextBox;
         private System.Windows.Forms.MenuStrip OrderBuildermenuStrip;
         private System.Windows.Forms.StatusStrip UserOrderInfostatusStrip;
         private System.Windows.Forms.TextBox OrderDetailstextBox;
         private System.Windows.Forms.Label OrderDetailsNoteslabel;
-        private System.Windows.Forms.Label Wastelabel;
         private System.Windows.Forms.Label Laborlabel;
-        private System.Windows.Forms.Label MaterialsCostlabel;
         private System.Windows.Forms.Label Taxlabel;
         private System.Windows.Forms.Label ItemCountlabel;
         private System.Windows.Forms.ListBox ShirtDetailsAddlistBox;

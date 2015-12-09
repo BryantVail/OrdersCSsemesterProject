@@ -135,6 +135,7 @@ namespace OrderEmployeedManagementWindowsNative.Orders
         }//end TagBoolComboBox Handler(SelectedIndexChanged)
 
 
+
             int itemsPurchased;
             int quantityChosenToAdd;
                 private void AddShirtDetailsbutton_Click(object sender, EventArgs e)
@@ -142,13 +143,19 @@ namespace OrderEmployeedManagementWindowsNative.Orders
             int.TryParse(QuantityShirtscomboBox.Text, out quantityChosenToAdd);
                 itemsPurchased += quantityChosenToAdd;
                 ItemCounttextBox.Text = itemsPurchased.ToString();
-        }
+
+
+
+                    //Controls back to default
+
+        }//end AddShirtDetailsButton Handler(Click)
 
 
         //Test=================================
 
         private void Calculatebutton_Click(object sender, EventArgs e)
         {
+
             if (amountCollected > 0)
                 amountCollected = amountCollected * 1;
             else

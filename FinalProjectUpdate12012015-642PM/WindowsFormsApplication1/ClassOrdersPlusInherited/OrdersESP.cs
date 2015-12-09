@@ -166,7 +166,7 @@ namespace OrderEmployeedManagementWindowsNative
             }//end get
             set
             {
-                if (value > 0)
+                if (value >= 0)
                     itemsSold = value;
                 else
                 {
